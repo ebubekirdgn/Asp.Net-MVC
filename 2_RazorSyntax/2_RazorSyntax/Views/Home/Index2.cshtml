@@ -1,0 +1,44 @@
+﻿
+@{
+    /**/
+
+    ViewBag.Title = "Index2";
+}
+
+<h2>Index2</h2>
+
+@{
+    string[] adlar = new string[] { "Ali", "Fatma", "Ayşe" };
+    foreach (string item in adlar)
+    {
+        @item<br />
+    }
+
+    <hr />
+
+    int index = 0;
+    <ul>
+        @foreach (string item in adlar)
+        {
+            if (index % 2 == 0)
+            {
+                <li><b>@item</b></li>
+            }
+
+            else
+            {
+                <li>@item</li>
+            }
+            index++;    // ; sayesinde C# kodu olduğunu anladı
+        }
+    </ul>
+
+}
+
+<hr />
+
+@for (int i = 0; i < 10; i++)
+{
+    @("Sayi " + i ) <br />
+}
+

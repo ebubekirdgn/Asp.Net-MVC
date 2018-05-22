@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<style>
+    .kirmizi {
+        color: red
+    }
+</style>
+
+<input id="text1" type="text" name="text1" /> <br />
+<input id="button1" type="button" name="button1" , value="Bana Tıkla!" /> <br />
+<a href="/HtmlHelpers/Index2">Index2 Sayfasına Git</a>
+
+<hr />
+
+@Html.ActionLink("Index2 Sayfasına git", "Index2", "HtmlHelpers", new { deger1 = "furkan", deger2 = "ışıtan" },
+    new { title = "Index2 sayfasına gider", @class = "kirmizi" }) <br />
+
+@**
+    Link Metni, ActionName(Sayfa adı), ControllerName(default olarak bulunduğu sayfanın controller'ıdır),
+    Sayfaya gönderilecek değerler, Sayfa attribute ları.
+    NOT: 'class' kelimesi C# tada özel anlam taşıdığı için başına @ işareti konuldu.
+*@
+
+@Html.TextBox("text2", "Adınız") <br />
+@Html.TextArea("textArea1", "Özgeçmiş Özetiniz", 8, 30, null) <br />
+<input id="button2" type="button" name="button2" , value="Bana Tıkla!" /> <br />
+@* Butonun Razor' da özel bir metodu yoktur. -->   *@

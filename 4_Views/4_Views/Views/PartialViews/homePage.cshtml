@@ -1,0 +1,59 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>homePage</title>
+</head>
+<body>
+    <div>
+        header
+        <div>
+            <a href="/PartialViews/about">Hakkında</a>
+        </div>
+        <hr />
+        <ul>
+            <li><a href="#">Consectetur adipiscing elit fusce vel.</a></li>
+            <li><a href="#">Sapien elit in malesuada semper.</a></li>
+            <li><a href="#">Mi, id sollicitudin urna fermentum.</a></li>
+        </ul>
+    </div>
+
+
+    <div>
+        body
+        <hr />
+        <p>Laoreet ac, aliquam sit amet justo nunc tempor, metus vel placerat suscipit, orci nisl iaculis eros, a tincidunt nisi odio eget lorem nulla condimentum tempor mattis ut vitae feugiat augue cras ut metus a risus iaculis scelerisque eu ac ante fusce non varius purus aenean nec magna felis fusce vestibulum.</p>
+
+
+
+        @* 1. Yol *@
+        @Html.Partial("_PartialFaydaliLinkler")
+
+
+        @*
+            PartialView dosyası Shared klasöründe veya kullanıldığı sayfanın Home klasörünün altında ise
+             direkt ismi yazılabilir.
+            Fakat farklı bir Home klasöründen, başka bir Home klasörü altındaki bir partial view çağrılırken
+             "../Home_Folder_Name/PartialViewName" şeklinde belirtilmelidir.
+        *@
+
+    </div>
+
+    <div>
+        footer
+        <hr />
+
+        @* 2. Yol *@
+        @{
+            Html.RenderPartial("_PartialFaydaliLinkler");
+        }
+
+    </div>
+</body>
+</html>

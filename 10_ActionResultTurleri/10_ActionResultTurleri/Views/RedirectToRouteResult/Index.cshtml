@@ -1,0 +1,43 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <h2>RedirectToRouteResult</h2>
+    </div>
+
+    <div>
+        @using (Html.BeginForm())
+        {
+            @Html.TextBox("ad", "", new { placeholder = "adınız" }) <br />
+            @Html.TextBox("soyad", "", new { placeholder = "soyadınız" })
+            <hr />
+            <button type="submit">Kaydet</button>
+        }
+    </div>
+    <div>
+        <hr />
+    </div>
+    <div>
+        @if (ViewBag.liste != null)
+        {
+            <ul>
+                @foreach (var item in ViewBag.liste)
+                {
+                    <li>@item</li>
+                }
+            </ul>
+        }
+    </div>
+
+</body>
+</html>

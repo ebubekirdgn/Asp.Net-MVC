@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewBag.Title = "Index2";
+}
+
+<h2>Index2</h2>
+
+<button id="btnLoad" type="button" class="btn btn-success">Verileri yükle</button>
+<input id="txtData" type="text" class="form-control" placeholder="veri giriniz" style="width:200px;" />
+<button id="btnLoad2" type="button" class="btn btn-success">Verileri gönder &amp; yükle</button>
+<hr />
+
+<div id="loading" class="alert alert-warning" style="display:none;">yükleniyor..</div>
+
+<ul id="list" class="list-group"></ul>
+
+<script>
+
+    // load, ilgili elemntin içine dışarıdan veri çekerek yükler.
+    // load metodu, veri gönderilmezse get yöntemini, veri, gönderilirse post yöntemini kullanır.
+
+    $(function () {
+
+        // load ile veri çekme
+        $("#btnLoad").click(function () {
+            $("#list").empty();
+            $("#loading").show(300, function () {
+                $("#list").load("/Home/VerileriGetir", function () {
+                    $("#loading").hide(300);
+                });
+            });
+        });
+
+        // load ile veri gönderme ve çekme
+        $("#btnLoad2").click(function () {
+            $("#list").empty();
+            $("#loading").show(300, function () {
+                var data = $("#txtData").val();
+                $("#list").load("/Home/VerileriGetir", { veri: data }, function () {
+                    $("#loading").hide(300);
+                });
+            });
+        });
+    });
+
+</script>
