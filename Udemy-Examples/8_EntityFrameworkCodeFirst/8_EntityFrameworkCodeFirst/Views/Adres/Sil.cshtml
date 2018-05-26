@@ -1,0 +1,43 @@
+﻿@model Adresler
+@{
+    ViewBag.Title = "Sil";
+}
+
+<h2>Adres Sil</h2>
+<hr />
+
+<p>
+    Adresi silmek istediğinizden emin misiniz?
+</p>
+
+<style>
+    .wd span {
+        width: 60px;
+    }
+</style>
+
+
+<div class="col-md-4 wd">
+    <div class="input-group input-group-sm mb-1">
+        <div class="input-group-prepend"><span class="input-group-text" id="txtAdres"> Adres </span></div>
+        @Html.TextBoxFor(x => x.AdresTanim, new { @class = "form-control", aria_describedby = "txtAd", @readonly = "readonly" })
+    </div>
+
+    <div class="input-group input-group-sm mb-1">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="kisi"> Kişi </span>
+        </div>
+        @Html.TextBox("kisi", $"{Model.Kisi.Ad} {Model.Kisi.Soyad} ({Model.Kisi.Yas})", new { @class = "form-control", aria_describedby = "kisi", @readonly = "readonly" })
+    </div>
+
+    @using (Html.BeginForm())
+    {
+        <div class="input-group input-group-sm mb-4">
+            <input type="submit" value="Sil" class="btn btn-success" />
+        </div>
+    }
+
+</div>
+
+
+

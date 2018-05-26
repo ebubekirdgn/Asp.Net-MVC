@@ -1,0 +1,53 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>homepage</title>
+
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div>
+        <h2>Bootstrap Kullanımı</h2>
+    </div>
+
+    <div>
+        <input type="button" name="b1" value="Button" class="btn btn-danger" /><br /><br />
+        <a href="#" class="btn btn-success btn-lg">Action Link</a>
+    </div>
+    <hr />
+
+    @* container => Ekrana ortalanır, container-fluid => Ekranın tamamını kaplar *@
+    @* xlg, lg, md(desktop/laptop), sm(tablet), col-(phone) *@
+    <div class="container-fluid">
+        <div class="row">
+
+            @* col-12 varsayılan davranıştır. *@
+            <div class="col-md-4 col-sm-5 col-12">
+                <h3>Sit amet, consectetur.</h3>
+                Scelerisque euismod, iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel placerat suscipit, orci nisl iaculis eros, a tincidunt nisi odio eget lorem nulla condimentum tempor mattis ut vitae feugiat augue.
+                <hr />
+            </div>
+
+            <div class="col-md-4 col-sm-5 col-12">
+                <h3>Sit amet, consectetur.</h3>
+                Scelerisque euismod, iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel placerat suscipit, orci nisl iaculis eros, a tincidunt nisi odio eget lorem nulla condimentum tempor mattis ut vitae feugiat augue.
+                <hr />
+            </div>
+
+            <div class="col-md-4 col-sm-2 col-12">
+                <h3>Sit amet, consectetur.</h3>
+                Scelerisque euismod, iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel placerat suscipit, orci nisl iaculis eros, a tincidunt nisi odio eget lorem nulla condimentum tempor mattis ut vitae feugiat augue.
+                <hr />
+            </div>
+        </div>
+    </div>
+</body>
+</html>

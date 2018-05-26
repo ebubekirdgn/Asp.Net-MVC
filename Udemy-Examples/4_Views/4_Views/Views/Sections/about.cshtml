@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "about";
+    Layout = "~/Views/Shared/Sections/_LayoutPage1.cshtml";
+}
+
+<h2>about</h2>
+
+<p>
+    Mi, id sollicitudin urna fermentum ut fusce varius nisl ac ipsum gravida vel pretium tellus.
+    Tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod, iaculis eu lacus.
+    Nunc mi elit, vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.
+    Placerat suscipit, orci nisl iaculis eros, a tincidunt nisi odio eget lorem nulla condimentum tempor.
+    Mattis ut vitae feugiat augue cras ut metus a risus iaculis scelerisque eu ac ante.
+    Fusce non varius purus aenean nec magna felis fusce vestibulum velit mollis odio sollicitudin lacinia.
+</p>
+
+@section links{
+    <li>@Html.ActionLink("Blog", "blog", "Sections")</li>
+    <li>@Html.ActionLink("İletişim", "contact", "Sections")</li>
+}

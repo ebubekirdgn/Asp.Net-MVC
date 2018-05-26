@@ -1,0 +1,27 @@
+﻿@helper Input(string name, string type, string value)
+    {
+        <input type="@type" name="@name" id="@name" value="@value" />
+}
+
+@helper Table(string name, int rows, int colums, params string[] headers)
+    {
+        <table id="@name" border="1">
+
+            <tr>
+                @for (int i = 0; i < colums; i++)
+                {
+                    <th>@headers[i]</th>
+                }
+            </tr>
+
+            @for (int i = 0; i < rows; i++)
+            {
+                <tr>
+                    @for (int j = 0; j < colums; j++)
+                    {
+                        <td>@($"({i},{j})")</td>
+                    }
+                </tr>
+            }
+        </table>
+}

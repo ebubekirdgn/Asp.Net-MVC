@@ -1,0 +1,195 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>homepage</title>
+
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-grid.min.css" rel="stylesheet" />
+
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</head>
+<body>
+
+    <div class="container-fluid">
+
+        @* header *@
+        <div class="row">
+            <div class="col-12">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    @* Site Adı *@
+                    <a class="navbar-brand" href="/SayfaTasarimi/homepage">SiteAdı</a>
+
+                    @* Sayfa küçüldüğünde çıkan 3 çizgili menü nesnesi. *@
+                    @* data-target="" => Nesnenin üzerine tıklandığında, belirtilen id li nesne görüntülenir. *@
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="menu">
+                        @* liste *@
+                        <ul class="nav navbar-nav">
+                            <li><a class="nav-link" href="/SayfaTasarimi/homepage">Ana Sayfa</a></li>
+                            <li><a class="nav-link" href="/SayfaTasarimi/about">Hakkımızda</a></li>
+                            <li><a class="nav-link" href="/SayfaTasarimi/contact">İletişim</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        @* body *@
+        <div class="row">
+
+            <div class="col-9">
+
+                <h2>Makaleler</h2>
+
+                @* Panel *@
+                <div class="card">
+                    <div class="card-header">Featured</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">
+                            Tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.
+                        </p>
+                        <a href="#" class="btn btn-primary btn-sm">More</a><br />
+                    </div>
+                    <div class="card-footer">
+                        <span class="badge badge-primary">Primary</span>
+                        <span class="badge badge-secondary">Secondary</span>
+                        <span class="badge badge-success">Success</span>
+                        <span class="badge badge-danger">Danger</span>
+                        <span class="badge badge-warning">Warning</span>
+                        <span class="badge badge-info">Info</span>
+                        <span class="badge badge-light">Light</span>
+                        <span class="badge badge-dark">Dark</span>
+                    </div>
+                </div>
+
+                <br />
+
+                <div class="card">
+                    <div class="card-header">Featured</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">
+                            Tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.
+                        </p>
+                        <a href="#" class="btn btn-primary btn-sm">More</a><br />
+                    </div>
+                    <div class="card-footer">
+                        <span class="badge badge-primary">Primary</span>
+                        <span class="badge badge-secondary">Secondary</span>
+                        <span class="badge badge-success">Success</span>
+                        <span class="badge badge-danger">Danger</span>
+                        <span class="badge badge-warning">Warning</span>
+                        <span class="badge badge-info">Info</span>
+                        <span class="badge badge-light">Light</span>
+                        <span class="badge badge-dark">Dark</span>
+                    </div>
+                </div>
+
+                <br />
+
+                <div class="card">
+                    <div class="card-header">Featured</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">
+                            Tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.
+                        </p>
+                        <a href="#" class="btn btn-primary btn-sm">More</a><br />
+                    </div>
+                    <div class="card-footer">
+                        <span class="badge badge-primary">Primary</span>
+                        <span class="badge badge-secondary">Secondary</span>
+                        <span class="badge badge-success">Success</span>
+                        <span class="badge badge-danger">Danger</span>
+                        <span class="badge badge-warning">Warning</span>
+                        <span class="badge badge-info">Info</span>
+                        <span class="badge badge-light">Light</span>
+                        <span class="badge badge-dark">Dark</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-3">
+
+                <h2>Kategoriler</h2>
+                <hr />
+                <ul>
+                    <li><a href="#">Kategori1</a></li>
+                    <li><a href="#">Kategori2</a></li>
+                    <li><a href="#">Kategori3</a></li>
+                    <li><a href="#">Kategori4</a></li>
+                    <li><a href="#">Kategori5</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <hr />
+        @* footer *@
+        <div class="row">
+
+            <div class="col-4">
+                <ul class="small">
+                    <li>
+                        <a href="#">Dolor sit.</a>
+                    </li>
+                    <li>
+                        <a href="#">Dolor sit.</a>
+                    </li>
+                    <li>
+                        <a href="#">Dolor sit.</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-4">
+                <ul class="small">
+                    <li>
+                        <a href="#">Dolor sit.</a>
+                    </li>
+                    <li>
+                        <a href="#">Dolor sit.</a>
+                    </li>
+                    <li>
+                        <a href="#">Dolor sit.</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-4">
+                <ul class="small">
+                    <li>
+                        <a href="#">Dolor sit.</a>
+                    </li>
+                    <li>
+                        <a href="#">Dolor sit.</a>
+                    </li>
+                    <li>
+                        <a href="#">Dolor sit.</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-12 text-center">
+                <hr />
+                <span class="small">
+                    Tüm hakları saklıdır &copy; 2018
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

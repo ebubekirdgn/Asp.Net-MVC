@@ -1,0 +1,40 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>homePage</title>
+</head>
+<body>
+    <div>
+
+        @{
+            // Value değeri yoksa text deki değer döner.
+            SelectListItem[] list = new SelectListItem[]
+            {
+        new SelectListItem() {Text="Pazartesi", Value="Pzt"},
+        new SelectListItem() {Text="Salı", Value="Sal"},
+        new SelectListItem() {Text="Çarşamba", Value="Çar"},
+        new SelectListItem() {Text="Perşembe", Value="Per"},
+        new SelectListItem() {Text="Cuma", Value="Cum"},
+        new SelectListItem() {Text="Cumartesi", Value="Cmt"},
+        new SelectListItem() {Text="Pazar", Value="Pzr"}
+            };
+        }
+
+        @using (Html.BeginForm())
+        {
+            @Html.TextBox("text1") <br />
+            @Html.DropDownList("list1", list) <br />
+            @("Onayla") @Html.CheckBox("check1") <br />
+            <input type="submit" name="btnSend" value="send" />
+        }
+
+    </div>
+</body>
+</html>

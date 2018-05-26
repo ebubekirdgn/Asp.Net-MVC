@@ -1,0 +1,137 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>homepage</title>
+
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-grid.min.css" rel="stylesheet" />
+
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</head>
+<body>
+
+    <div class="container-fluid">
+
+        @* header *@
+        <div class="row">
+            <div class="col-12">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    @* Site Adı *@
+                    <a class="navbar-brand" href="/HelperMethods/homepage">SiteAdı</a>
+
+                    @* Sayfa küçüldüğünde çıkan 3 çizgili menü nesnesi. *@
+                    @* data-target="" => Nesnenin üzerine tıklandığında, belirtilen id li nesne görüntülenir. *@
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="menu">
+                        @* liste *@
+                        <ul class="nav navbar-nav">
+                            <li><a class="nav-link" href="/HelperMethods/homepage">Ana Sayfa</a></li>
+                            <li><a class="nav-link" href="/HelperMethods/about">Hakkımızda</a></li>
+                            <li><a class="nav-link" href="/HelperMethods/contact">İletişim</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        @* body *@
+        <div class="row">
+
+            <div class="col-9">
+
+                <h2>Makaleler</h2>
+
+                @* Paneller *@
+
+                @BootstrapHelperMethods.Card("Header1", "Title1",
+                                "Laoreet ac, aliquam sit amet justo nunc tempor, metus vel placerat suscipit, orci nisl iaculis eros, a tincidunt nisi odio eget lorem nulla condimentum tempor mattis ut vitae feugiat augue cras ut metus a risus iaculis scelerisque eu ac ante fusce non varius purus aenean nec magna felis fusce vestibulum.",
+                                new string[] { "primary", "Primary" }, new string[] { "secondary", "Secondary" },
+                                new string[] { "success", "Success" })
+
+                @BootstrapHelperMethods.Card("Header2", "Title2",
+                                "Laoreet ac, aliquam sit amet justo nunc tempor, metus vel placerat suscipit, orci nisl iaculis eros, a tincidunt nisi odio eget lorem nulla condimentum tempor mattis ut vitae feugiat augue cras ut metus a risus iaculis scelerisque eu ac ante fusce non varius purus aenean nec magna felis fusce vestibulum.",
+                                new string[] { "danger", "Danger" }, new string[] { "warning", "Warning" })
+
+                @BootstrapHelperMethods.Card("Header3", "Title3",
+                                       "Laoreet ac, aliquam sit amet justo nunc tempor, metus vel placerat suscipit, orci nisl iaculis eros, a tincidunt nisi odio eget lorem nulla condimentum tempor mattis ut vitae feugiat augue cras ut metus a risus iaculis scelerisque eu ac ante fusce non varius purus aenean nec magna felis fusce vestibulum.",
+                                       new string[] { "info", "Info" }, new string[] { "Light", "light" },
+                                new string[] { "dark", "Dark" })
+            </div>
+
+            <div class="col-3">
+
+                <h2>Kategoriler</h2>
+                <hr />
+                @BootstrapHelperMethods.List("list1", "https://www.facebook.com/ Facebook", "https://twitter.com/ Twitter",
+                                   "https://www.instagram.com/ Instagram", "# Kategori4", "# Kategori5", "# Kategori6", "# Kategori7")
+            </div>
+
+        </div>
+
+        <hr />
+        @* footer *@
+        <div class="row">
+
+            <div class="col-4">
+                <ul class="small">
+                    <li>
+                        <a href="#">Dolor sit.</a>
+                    </li>
+                    <li>
+                        <a href="#">Dolor sit.</a>
+                    </li>
+                    <li>
+                        <a href="#">Dolor sit.</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-4">
+                <ul class="small">
+                    <li>
+                        <a href="#">Dolor sit.</a>
+                    </li>
+                    <li>
+                        <a href="#">Dolor sit.</a>
+                    </li>
+                    <li>
+                        <a href="#">Dolor sit.</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-4">
+                <ul class="small">
+                    <li>
+                        <a href="#">Dolor sit.</a>
+                    </li>
+                    <li>
+                        <a href="#">Dolor sit.</a>
+                    </li>
+                    <li>
+                        <a href="#">Dolor sit.</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-12 text-center">
+                <hr />
+                <span class="small">
+                    Tüm hakları saklıdır &copy; 2018
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
