@@ -1,0 +1,13 @@
+{
+  "User": {
+    "Id": 2572828,
+    "Username": "ebubekirdgn",
+    "Name": "Ebubekir Doğan",
+    "Email": "ebubekir.dogan@teksenbilisim.com",
+    "AvatarUrl": "https://assets.gitlab-static.net/uploads/-/system/user/avatar/2572828/avatar.png",
+    "PrivateToken": "0a79b513352bad2000fc562986c33c1737446966a462aad864ad159e37388f52",
+    "Host": "https://gitlab.com",
+    "TwoFactorEnabled": false,
+    "ApiVersion": 3
+  }
+}
